@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EvenementService } from '../common/service/evenement.service';
 import { Evenement } from '../common/data/evenement';
+import { error } from 'protractor';
 
 @Component({
   selector: 'app-evenement',

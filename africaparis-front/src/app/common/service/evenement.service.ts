@@ -12,5 +12,6 @@ export class EvenementService {
     let url = "./events-api/public/events";
     return this.http.get<Evenement[]>(url);
   }
+  
   constructor(private http: HttpClient) { }
 }
