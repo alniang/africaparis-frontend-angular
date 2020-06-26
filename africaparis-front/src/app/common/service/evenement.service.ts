@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http'
 export class EvenementService {
 
   public recupererEvenement() : Observable<Evenement[]>{
-    let url = "./events-api/public/events";
+    let url = "./events/events-api/public/events";
     return this.http.get<Evenement[]>(url);
   }
   

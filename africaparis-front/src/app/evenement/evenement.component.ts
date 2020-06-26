@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EvenementService } from '../common/service/evenement.service';
 import { Evenement } from '../common/data/evenement';
-import { error } from 'protractor';
 
 @Component({
   selector: 'app-evenement',
@@ -10,9 +9,7 @@ import { error } from 'protractor';
 })
 export class EvenementComponent implements OnInit {
   evenements : Evenement[];
-  constructor(public evenementService : EvenementService) { 
-
-  }
+  constructor(public evenementService : EvenementService) { }
   
   ngOnInit(): void {
     this.evenementService.recupererEvenement()

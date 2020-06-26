@@ -1,3 +1,6 @@
-{ "/" : { "secure" : "false" ,
-                     "target" : "http://localhost:9002" }                  
+{ "/events" : { "secure" : "false" ,
+                     "target" : "http://localhost:9002" } ,
+
+  "/boutique" : {"secure" : "false" ,
+                     "target" : "http://localhost:9001"}                                   
 }
