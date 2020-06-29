@@ -12,6 +12,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { BorderCardDirective } from './border-card.directive';
 import { DetailsEvenementComponent } from './details-evenement/details-evenement.component';
+import { EvenementService } from './common/service/evenement.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { DetailsEvenementComponent } from './details-evenement/details-evenement
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [EvenementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

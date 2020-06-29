@@ -10,7 +10,6 @@ import { EvenementService } from '../common/service/evenement.service';
 })
 export class DetailsEvenementComponent implements OnInit {
 
-  evenements : Evenement[] = null;
   evenement : Evenement = null;
 
   constructor(private route : ActivatedRoute, 

@@ -3,7 +3,7 @@
     <h1>evenement works!</h1>
       <div class="row">
         <div *ngFor="let event of evenements" class="col-sm-4">
-          <div class="card" (click) = "selectEvenement(event)" afpBorderCard = "red">
+          <div class="card" (click) = "selectEvenement(event)" afpBorderCard = "blue">
             <div class="box-part text-center">
                 <img class="card-img-top" height="350" [src]="event.logo" alt="image evenement" />
                 <div class="card-img-overlay">
