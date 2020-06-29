@@ -12,6 +12,10 @@ export class EvenementService {
     let url = "./events/events-api/public/events";
     return this.http.get<Evenement[]>(url);
   }
-  
+
+  public recupererEvenementById(id : string) : Observable<Evenement>{
+    let url = "./events/events-api/public/events/:id";
+    return this.http.get<Evenement>(url);
+  }
   constructor(private http: HttpClient) { }
 }

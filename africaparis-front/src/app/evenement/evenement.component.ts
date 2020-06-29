@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EvenementService } from '../common/service/evenement.service';
 import { Evenement } from '../common/data/evenement';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-evenement',
@@ -9,7 +10,7 @@ import { Evenement } from '../common/data/evenement';
 })
 export class EvenementComponent implements OnInit {
   evenements : Evenement[];
-  constructor(public evenementService : EvenementService) { }
+  constructor(private router: Router, public evenementService : EvenementService) { }
   
   ngOnInit(): void {
     this.evenementService.recupererEvenement()
@@ -17,5 +18,11 @@ export class EvenementComponent implements OnInit {
       evenement => {this.evenements = evenement},
       error => { console.log(error)}
     )
+  }
+
+  selectEvenement(evenement : Evenement){
+    console.log('Vous avez sélectionné ' + evenement.titre);
+    let link = ['/evenement', evenement.id];
+    this.router.navigate(link);
   }
 }

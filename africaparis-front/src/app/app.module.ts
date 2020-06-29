@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { EvenementComponent } from './evenement/evenement.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
+import { BorderCardDirective } from './border-card.directive';
+import { DetailsEvenementComponent } from './details-evenement/details-evenement.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BoutiqueComponent } from './boutique/boutique.component';
     FooterComponent,
     EvenementComponent,
     AccueilComponent,
-    BoutiqueComponent
+    BoutiqueComponent,
+    BorderCardDirective,
+    DetailsEvenementComponent
   ],
   imports: [
     BrowserModule,
