@@ -13,6 +13,7 @@ import { BoutiqueComponent } from './boutique/boutique.component';
 import { BorderCardDirective } from './border-card.directive';
 import { DetailsEvenementComponent } from './details-evenement/details-evenement.component';
 import { EvenementService } from './common/service/evenement.service';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { EvenementService } from './common/service/evenement.service';
     AccueilComponent,
     BoutiqueComponent,
     BorderCardDirective,
-    DetailsEvenementComponent
+    DetailsEvenementComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [EvenementService],
   bootstrap: [AppComponent]
