@@ -1,1 +1,8 @@
 <p>accueil works!</p>
+<!-- <img src="../../assets/afrique.jpg"> -->
+<!-- {{articles.logo}} -->
+<div id="myCarousel" class="caroussel slide" data-ride="caroussel">
+    <div *ngFor = "let article of articles">
+        <img [src] = "article.logo">
+    </div>
+</div>

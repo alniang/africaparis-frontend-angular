@@ -1,37 +1,24 @@
-<p>details-evenement works!</p>
-<div class="box">
-    <div class="container mt-5">
-    <h1>evenement works!</h1>
+<div class="container">
+  <div class="card mb-3">
+    <img [src]="evenement.logo" class="card-img-top" alt="image evenement" />
+  </div>
+  <div class="card-body" id="titre">
+      <h5 class="card-title"><strong>{{ evenement.titre }}</strong></h5>
+  </div>
+  <div class="card mb-3">
+    <div class="card-body">
+      <p class="card-text">{{ evenement.desc }}</p>
       <div class="row">
-        <div *ngFor="let evenement of evenement" class="row">
-            <div class="col-sm-4">
-                <h2>{{evenement.titre}}</h2>
-                <div class="box-part text-center">
-                    <img class="card-img-top" height="350" [src]="evenement.logo" alt="image evenement" />
-                    <div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Titre</td>
-                                    <td><strong>{{evenement.titre}}</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Lieu</td>
-                                    <td><strong>{{evenement.lieu}}</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Desc</td>
-                                    <td><strong>{{evenement.desc}}</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>                   
-                    </div>
-                    <div>
-                        <a (click) = "goBack()">Retour</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div>
+              <small class="text-muted"> <strong id="date">Date : {{evenement.debut}} {{evenement.fin}}</strong></small>
+          </div>
+          <div class="text-center">
+              <small class="text-muted"> <strong id="horaire">Horaire : {{evenement.heure}}</strong></small>
+          </div>
+          <div class="text-rigth">
+              <a href="{{evenement.url}}" class="btn btn-primary" id="info">Plus d'infos</a>
+          </div>
       </div>
     </div>
+  </div>
 </div>

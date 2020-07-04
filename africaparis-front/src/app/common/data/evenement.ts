@@ -5,6 +5,7 @@ export interface Evenement {
   desc: string;
   debut: string;
   fin: string;
+  heure: string;
   logo: string;
   url: string;
 }

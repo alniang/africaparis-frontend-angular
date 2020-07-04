@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class EvenementComponent implements OnInit {
   evenements : Evenement[];
   evenement : Evenement;
+  idEvenement : string;
 
   constructor(private route : ActivatedRoute,
               private router: Router, 
@@ -24,18 +25,11 @@ export class EvenementComponent implements OnInit {
     )
   }
 
-  getOne(){
-    let id = this.route.snapshot.paramMap.get('id');
-    this.evenementService.recupererEvenementById(id)
-        .subscribe(evenement => {
-          this.evenement = evenement
-        })
-  }
-
-  selectEvenement(evenement : Evenement){
-    console.log('Vous avez sélectionné ' + evenement.titre);
-    let link = ['/evenement', evenement.id];
-    this.getOne();
-    this.router.navigate(link);
+  recupererEvenementById(evenement){
+    console.log(JSON.stringify(evenement))
+    console.log("id recupéré = " + evenement.id)
+    this.idEvenement = evenement.id;
+    sessionStorage.setItem("id", this.idEvenement);
+    this.router.navigate(['/evenement', this.idEvenement]);
   }
 }

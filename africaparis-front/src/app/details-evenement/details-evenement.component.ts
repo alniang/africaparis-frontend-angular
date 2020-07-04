@@ -11,17 +11,20 @@ import { EvenementService } from '../common/service/evenement.service';
 export class DetailsEvenementComponent implements OnInit {
 
   evenement : Evenement = null;
+  idEvenement = sessionStorage.getItem("id");
 
   constructor(private route : ActivatedRoute, 
               private router : Router,
               private evenementService : EvenementService) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get('id');
-    this.evenementService.recupererEvenementById(id)
-        .subscribe(evenement => {
-          this.evenement = evenement
-        })
+    this.recupererEvenement(this.idEvenement)
+  }
+
+  recupererEvenement(id) {
+    this.evenementService.recupererEvenementById(id).subscribe(
+        data => { this.evenement = data;}
+    )
   }
 
   goBack() : void {

@@ -5,10 +5,12 @@
         <div *ngFor="let article of articles | paginate : config" class="col-sm-4">
           <div class="card" style="width: 18rem;">
             <div class="box-part text-center">
+              <a href="{{article.url}}" target="_blank">
                 <img class="card-img-top" height="350" [src]="article.logo" alt="image article" />
                 <div class="card-img-overlay">
                     <h6><a href="#">{{article.titre}}</a></h6>
                 </div>
+              </a>
                 {{article.prix}}
             </div>
           </div>

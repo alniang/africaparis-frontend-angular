@@ -14,7 +14,7 @@ export class EvenementService {
   }
 
   public recupererEvenementById(id : string) : Observable<Evenement>{
-    let url = "./events/events-api/public/events/:id";
+    let url = "./events/events-api/public/events/" + id;
 
     return this.http.get<Evenement>(url);
   }
