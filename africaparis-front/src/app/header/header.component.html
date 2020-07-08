@@ -1,46 +1,46 @@
-<body id="myheader">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-      <span class="navbar-text">
-        Africa-Paris
-      </span>
-      <button 
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarText"
-        aria-controls="navbarText"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/accueil">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/evenement">Evenement</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/boutique">Boutique</a>
-          </li>
-          <!-- Ajout -->
-          <li *ngIf="authority === 'user'" class="nav-item">
-            <a class="nav-link" routerLink="user">User Board</a>
-          </li>
-          <li *ngIf="authority === 'admin'" class="nav-item">
-            <a class="nav-link" routerLink="admin">Admin Board</a>
-          </li>
-          <li *ngIf="authority === 'pm'" class="nav-item">
-            <a class="nav-link" routerLink="pm">PM Board</a>
-          </li>
-          <li *ngIf="!authority" class="nav-item">
-            <a class="nav-link" routerLink="auth/login">Ajouter un evenement</a>
-          </li>
-        </ul>
+<header id="myheader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <img
+          id="isika"
+          src="../../assets/photos/africaparis-blanc.png"
+          alt=""
+        />
+        <p>Africa-Paris</p>
       </div>
-    </nav>
-  </header>
-</body>
+      <div class="offset-8 col-sm-2">
+        <img id="isika" src="../../assets/photos/isika.png" alt="" />
+      </div>
+    </div>
+  </div>
+</header>
+<header id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <span class="navbar-text"> </span>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/evenement">Evenement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/boutique">Boutique</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
