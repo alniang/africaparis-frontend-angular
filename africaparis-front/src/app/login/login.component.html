@@ -1,7 +1,7 @@
-<div *ngIf="isLoggedIn; else loggedOut">Logged in as {{ roles }}.</div>
+<div id="login" *ngIf="isLoggedIn; else loggedOut">Logged in as {{ roles }}.</div>
 
 <ng-template #loggedOut>
-  <div class="col-sm-8 offset-sm-2 mt-2">
+  <div id="login" class="col-sm-8 offset-sm-2 mt-2" >
     <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
       <div class="form-group">
         <label for="username">Username</label>
