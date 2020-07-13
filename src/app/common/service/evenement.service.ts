@@ -12,17 +12,17 @@ export class EvenementService {
   constructor(private http: HttpClient) { }
   
   public recupererEvenement() : Observable<Evenement[]>{
-    let url = "https://africaparis-nodejs.herokuapp.com/events/events-api/public/user/events";
+    let url = "https://africaparis-evenements.herokuapp.com/events/events-api/public/user/events";
     return this.http.get<Evenement[]>(url);
   }
 
   public recupererEvenementById(id : string) : Observable<Evenement>{
-    let url = "https://africaparis-nodejs.herokuapp.com/events/events-api/public/user/events" + id;
+    let url = "https://africaparis-evenements.herokuapp.com/events/events-api/public/user/events" + id;
     return this.http.get<Evenement>(url);
   }
 
   public ajoutEvenement(evenement : Evenement) : Observable<Evenement>{
-    let url = "https://africaparis-nodejs.herokuapp.com/events/events-api/public/user/events";
+    let url = "https://africaparis-evenements.herokuapp.com/events/events-api/public/user/events";
     return this.http.post<Evenement>(url, evenement, {headers: this._headers});
   }
 }

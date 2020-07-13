@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class BoutiqueService {
 
   public recupererArticle() : Observable<Boutique[]> {
-    let url = "https://africaparis-nodejs.herokuapp.com/boutique/boutique-api/public/articles";
+    let url = "https://africaparis-boutique.herokuapp.com/boutique/boutique-api/public/articles";
     return this.http.get<Boutique[]>(url);
   }
 
