@@ -22,7 +22,7 @@ export class EvenementService {
   }
 
   public ajoutEvenement(evenement : Evenement) : Observable<Evenement>{
-    let url = "https://africaparis-evenements.herokuapp.com/events/events-api/public/events";
+    let url = "https://africaparis-evenements.herokuapp.com/events/events-api/public/user/events";
     return this.http.post<Evenement>(url, evenement, {headers: this._headers});
   }
 }
