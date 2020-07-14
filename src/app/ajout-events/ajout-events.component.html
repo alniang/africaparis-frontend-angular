@@ -1,0 +1,47 @@
+<div class="box container">
+    <div [hidden]="submitted">
+      <h1>Ajouter un évenement </h1>
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        
+        <div class="form-group">
+          <label for="titre">Titre</label>
+          <input type="text" class="form-control" id="titre" required [(ngModel)]="evenement.titre" name="titre" #name="ngModel">
+        </div>
+  
+        <div class="form-group">
+          <label for="lieu">Lieu</label>
+          <input type="text" class="form-control" id="lieu" required [(ngModel)]="evenement.lieu" name="lieu" #name="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea type="text" class="form-control" id="description" required [(ngModel)]="evenement.desc" name="description" #name="ngModel"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="debut">Début : </label>
+          <input type="text" class="form-control" id="debut" required [(ngModel)]="evenement.debut" name="debut" #name="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="fin">Fin : </label>
+          <input type="text" class="form-control" id="fin" required [(ngModel)]="evenement.fin" name="fin" #name="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="heure">Heure : </label>
+          <input type="datetime" class="form-control" id="heure" required [(ngModel)]="evenement.heure" name="heure" #name="ngModel">
+        </div>
+
+        <div class="form-inline">
+          <div class="form-group mb-2">
+            <label for="logo">Logo : </label>
+            <input type="file" class="form-control" id="logo" required [(ngModel)]="evenement.logo" name="logo" #name="ngModel">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+  

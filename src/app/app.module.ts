@@ -17,7 +17,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
-import { AdminComponent } from './admin/admin.component'
+import { AdminComponent } from './admin/admin.component';
+import { AjoutEventsComponent } from './ajout-events/ajout-events.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AdminComponent } from './admin/admin.component'
     LoginComponent,
     UserComponent,
     AdminComponent,
+    AjoutEventsComponent,
     
   ],
   imports: [
