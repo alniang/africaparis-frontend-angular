@@ -33,11 +33,11 @@
           <input type="datetime" class="form-control" id="heure" required [(ngModel)]="evenement.heure" name="heure" #name="ngModel">
         </div>
 
-        <div class="form-inline">
-          <div class="form-group mb-2">
+        <div class="form-group">
+          <!-- <div class="form-group mb-2"> -->
             <label for="logo">Logo : </label>
-            <input type="file" class="form-control" id="logo" required [(ngModel)]="evenement.logo" name="logo" #name="ngModel">
-          </div>
+            <input type="image" class="form-control" id="logo" required [(ngModel)]="evenement.logo" name="logo" #name="ngModel">
+          <!-- </div> -->
         </div>
 
         <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
