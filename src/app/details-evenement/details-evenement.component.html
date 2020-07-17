@@ -1,24 +1,42 @@
-<div class="box container">
-  <div class="card mb-3">
-    <img [src]="evenement.logo" class="card-img-top" alt="image evenement" />
-  </div>
-  <div class="card-body" id="titre">
-      <h5 class="card-title"><strong>{{ evenement.titre }}</strong></h5>
-  </div>
-  <div class="card mb-3">
-    <div class="card-body">
-      <p class="card-text">{{ evenement.desc }}</p>
-      <div class="row">
-          <div>
-              <small class="text-muted"> <strong id="date">Date : {{evenement.debut}} {{evenement.fin}}</strong></small>
+<body>
+  <main id="main">
+    <div class="box container">
+      <div class="row topspace">
+        <!-- Article main content -->
+        <article class="col-sm-8 maincontent">
+          <p><img [src]="evenement.logo" alt="" /></p>
+          <!-- <header class="page-header"> -->
+          <h2 class="page-title"><b>{{ evenement.titre }}</b></h2>
+          <!-- </header> -->
+          <h3>Description</h3>
+          <p>{{ evenement.desc }}</p>
+        </article>
+        <!-- /Article -->
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 sidebar sidebar-left">
+          <div class="card widget">
+            <div class="card-body">
+              <h4><b>DATE :</b></h4>
+              {{ evenement.debut }} {{ evenement.fin }}
+            </div>
+            <div class="card-body heure">
+              <h4><b>HEURE :</b></h4>
+              {{ evenement.heure }}
+            </div>
+            <div class="card-body">
+              <h4><b>LIEU :</b></h4>
+              {{ evenement.lieu }}
+            </div>
+            <div class="card-body">
+              <h4><b>PLUS D'INFOS :</b></h4>
+              <a href="{{ evenement.url }}" id="info">Lire la suite</a>
+            </div>
           </div>
-          <div class="text-center">
-              <small class="text-muted"> <strong id="horaire">Horaire : {{evenement.heure}}</strong></small>
-          </div>
-          <div class="text-rigth">
-              <a href="{{evenement.url}}" class="btn btn-primary" id="info">Plus d'infos</a>
-          </div>
+        </aside>
+        <!-- /Sidebar -->
       </div>
     </div>
-  </div>
-</div>
+    <!-- /container -->
+  </main>
+</body>
