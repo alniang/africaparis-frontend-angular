@@ -1,4 +1,5 @@
 <body>
+  <img class="img-responsive" src="../../assets/photos/boutique-bg.jpg">
   <section class="gallery-block cards-gallery">
      <div class="container">
          <div class="heading">
@@ -9,8 +10,11 @@
                  <div class="card border-0 transform-on-hover lightbox">
                   <a href="{{article.url}}" target="_blank">
                     <img class="card-img-top" height="350" [src]="article.logo" alt="image evenement" />
-                    <div class="card-body">
-                        <h6>{{article.titre}}</h6>
+                      <div class="card-body">
+                          <h6>{{article.titre}}</h6>
+                      </div>
+                    <div class="text-center">
+                      <button class="btn btn-success">Details</button>
                     </div>
                   </a>
                  </div>

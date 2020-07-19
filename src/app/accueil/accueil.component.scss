@@ -5,7 +5,6 @@
   outline: black;
   background-size: 100%, 100%;
   border-radius: 50%;
-  border: 1px solid black;
   background-image: none;
 }
 
@@ -13,18 +12,13 @@
 {
   content: '>';
   font-size: 55px;
-  color: red;
+  color: grey;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 55px;
-  color: red;
-}
-
-.carousel-inner{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  color: grey;
 }
 
 .carousel-indicators{
@@ -39,6 +33,50 @@ button{
   margin-left: 550px;
 }
 
-p{
-  margin-left: -150px;
+.carousel{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+img{
+  border-radius: 15px;
+}
+
+.image1{
+  height: 450px;
+  text-align: center;
+}
+
+.image2{
+  height: 450px;
+  text-align: center;
+  color: black;
+}
+
+.image3{
+  height: 550px;
+  text-align: right;
+  color: black;
+}
+
+.image1 span{
+  background-color: black;
+  opacity: 0.8;
+  font-size: 30px;
+}
+
+.image2 span{
+  background-color: whitesmoke;
+  opacity: 0.5;
+  font-size: 30px;
+}
+
+.image3 span{
+  background-color: whitesmoke;
+  opacity: 0.5;
+  font-size: 30px;
+}
+
+p {
+  background-color: black;
 }
