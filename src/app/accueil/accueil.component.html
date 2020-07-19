@@ -1,7 +1,7 @@
 <div *ngIf="info.token; else loggedOut">
   <div class="row">
     <div class="offset-1 col-sm-6">
-      <p><strong>Bienvenue </strong> {{ info.username }}</p>
+      <h3><strong>Bienvenue </strong> {{ info.username }}</h3>
     </div>
     <div class="offset-12 col-sm-4">
       <button class="btn btn-secondary col-sm-4" (click)="logout()">
