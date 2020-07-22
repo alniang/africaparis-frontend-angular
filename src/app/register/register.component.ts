@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   isSignedUp = false;
   isSignUpFailed = false;
   errorMessage = '';
+  fieldTextType: boolean
  
   constructor(private authService: AuthService) { }
  
@@ -40,5 +41,9 @@ export class RegisterComponent implements OnInit {
         this.isSignUpFailed = true;
       }
     );
+  }
+
+  toggleFieldTextType() {
+    this.fieldTextType = !this.fieldTextType;
   }
 }

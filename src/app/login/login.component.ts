@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+  fieldTextType: boolean;
   private loginInfo: AuthLoginInfo;
  
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
@@ -56,5 +57,9 @@ export class LoginComponent implements OnInit {
   reloadPage() {
     // window.location.reload();
     this.router.navigate(['/user/ajout']);
+  }
+
+  toggleFieldTextType() {
+    this.fieldTextType = !this.fieldTextType;
   }
 }
