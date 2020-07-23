@@ -32,7 +32,7 @@ export class AjoutEventsComponent implements OnInit {
   }
 
   onRedirige(){
-    this.router.navigate(['/accueil']);
+    this.router.navigate(['/evenement']);
   }
 
   ngOnInit(): void {
